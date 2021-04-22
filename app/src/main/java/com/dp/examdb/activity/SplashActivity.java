@@ -16,7 +16,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        if (AppUtils.isNetworkAvailable(this)) {
+        if (!AppUtils.isNetworkAvailable(this)) {
             startActivity(new Intent(this, NoInternetConnection.class));
         } else {
             new Handler().postDelayed(new Runnable() {
