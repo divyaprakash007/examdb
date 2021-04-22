@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Calendar calendar = Calendar.getInstance();
 
+        // TODO: 22-04-2021
         calendar.set(calendar.get(Calendar.YEAR),
                 calendar.get(Calendar.MONTH),
                 calendar.get(Calendar.DAY_OF_MONTH),
