@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dp.examdb">
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -11,11 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamDB">
-        <activity android:name=".activity.NoInternetConnection"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.MainActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".activity.SplashActivity"
+        <activity android:name=".activity.LoginActivity"></activity>
+        <activity
+            android:name=".activity.NoInternetConnection"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,10 +26,13 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".BroadcastReceivers.AlarmReceiver"
+        <receiver
+            android:name=".BroadcastReceivers.AlarmReceiver"
             android:enabled="true"
-            android:exported="true"/>
-
+            android:exported="true" />
     </application>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
